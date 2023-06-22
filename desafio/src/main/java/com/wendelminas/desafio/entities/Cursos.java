@@ -1,5 +1,8 @@
 package com.wendelminas.desafio.entities;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Cursos {
 	
 	private int id_curso;
