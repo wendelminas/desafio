@@ -1,10 +1,17 @@
 package com.wendelminas.desafio.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "cursos")
 public class Cursos {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_curso;
 	private String nome_curso;
 	private String materia;

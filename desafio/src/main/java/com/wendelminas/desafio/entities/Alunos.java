@@ -1,12 +1,18 @@
 package com.wendelminas.desafio.entities;
 
 import java.util.Date;
-
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "alunos")
 public class Alunos {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_aluno;
 	private String nome_aluno;
 	private Date data_nasc;
